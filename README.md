@@ -83,7 +83,20 @@ c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5
 
 ### Desarrollo
 
-Abrimos *POSTMAN* 
+* Abrimos *POSTMAN*
+* Pegamos la URL
+* En este caso como enviamos un *TOKEN* necesitamos hacerlo por el método *POST* pero puede ser *GET* o cualquier otro de los descritos anteriormente.
+
+* Nos vamos a *Body* y seleccionamos *application/x-www-form-urlencoded* que es parte de nuestras **cabeceras HTTP** o **Headers**. La definición formal sobre este parámetro del reader nos dice que:
+
+```
+"The values are encoded in key-value tuples separated by '&', with a '=' between the key and the value. Non-alphanumeric characters are percent encoded: this is the reason why this type is not suitable to use with binary data (use application/form-data instead)."
+```
+
+* Más abajo donde dice *New key* escribimos *token* que es el parámetro que nos pide nuestra API para devolvernos información (esto ya no es parte de las *cabeceras HTTP* sino de nuestro **Body**) y a continuación copiamos todo el token que se encuentra más arriba y lo pegamos en *value*.
+
+* Procedemos a darle *SEND* o enviar, y se vería algo así:
+
 <p align="center">
   <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto2.png" width="981C" height="705" />
 </p>
