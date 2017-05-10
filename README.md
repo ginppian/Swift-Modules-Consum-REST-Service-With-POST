@@ -17,7 +17,10 @@ Ahora ya tienes tu framework y es más fácil para ti programar, pero te das cue
 Supongamos que desarrollas Web y no te gusta hacer estilos (CSS) entonces programas tus funciones para que cuando tu agregues ciertas lineas a tu código tu página sea responsiva. Entoncesentonces apoyado de tu Framework haces los cálculos necesarios, tomas en cuenta todos los posibles casos, las medidas y después de mucho trabajo lo logras. Ahora cuando quieres estilos simplemente tomas y lo implementas lo que podría ser un Boostrap.
 
 El framework está compuesto de librerías y éstas a su vez de funciones que hacen bien una sola cosa.
-Las APIs se valen de estas funciones que vienen en los Frameworks y construyen una solución con un fin. Si hablamos de Construir un API Rest nos otros haríamos las consultas a la base, haríamos el tratamiento de esa información y tendríamos todo listo sólo para que el desarrollador móvil llegue e consuma esos datos de manera transparente.
+Las APIs se valen de estas funciones que vienen en los Frameworks y construyen una solución con un fin. Si hablamos de Construir un API Rest nos otros haríamos las consultas a la base, haríamos el tratamiento de esa información y tendríamos todo listo sólo para que el desarrollador móvil llegue y consuma esos datos de manera transparente, sin la necesidad de hacer el tratamiento de esa información (validación de login, actualización de los datos, eliminación de datos, consumo de información ordenada alfabeticamente) y menos sin la necesidad de hacer las funciones básicas de suma, conexión HTTP, algoritmos de ordenamiento como SORT etc.
+
+
+Básicamente un API es algo pre-programado que nos otros sólo llegamos e implementamos.
 </p>
 
 ### ¿Qué es un API REST?
