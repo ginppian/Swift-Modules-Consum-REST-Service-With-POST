@@ -315,4 +315,29 @@ class ViewController: UIViewController {
 }
 ```
 
+### Paso 4
+
+Si construimos y corremos nuestro código, veremos que en la consola de Xcode se despliega algo como esto:
+
+<p align="center">
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto5.png" width="957" height="168" />
+</p>
+
+Se despliegan los mismo resultados que en *POSTMAN* con esto podemos empezar a trabajar con esa información. El siguiente paso será desplegarla en Tablas o algún otro tipo de interface.
+
+## Conclusiones
+
+* Las APIs REST son indispensables en el desarrollo de aplicaciones móviles, ya que nuestro dispositivo es una *terminal* o *extensión* de algo más grande.
+
+* El uso de herramientas como *POSTMAN* nos permite saber si la información está siendo debidamente *TRATADA* o habría que modificar algo en el *API* o *BACK-END* antes de llevarlo a la *implementación* y que sea más costoso.
+
+* El uso de *Pods* como [Alamofire](https://github.com/Alamofire/Alamofire) nos hace más fácil la implementación, nos ahorra tiempo de producción y nos evita dolores de cabeza.
+
+### Contacto
+
+Twitter: @ginppian
+
+
+
+
 
