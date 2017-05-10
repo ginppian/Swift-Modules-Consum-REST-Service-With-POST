@@ -60,6 +60,6 @@ Antes de consumir los servicios nos gustaría probarlos para este fin, existen <
 Para este ejemplo usaré <b>POSTMAN</b> pero existe otros como <i>Advanced REST client</i>:
 
 <p align="center">
-  <img src="https://github.com/ginppian/Swift-Modules-Nice-CollectionView/blob/master/video.gif" width="320" height="568" />
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto1.png" width="568" height="320" />
 </p>
 
