@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
-
+    
+    let headers: HTTPHeaders = [
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json",
+        ]
+    
+    let params : Parameters = ["token": "c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5c7046e670d89365181d15d037262822231735da484398578"]
+    
+    let url = "https://offercity.herokuapp.com/api/mostrarEstablecimiento"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Alamofire.request(self.url, method: .post, parameters: self.params, encoding: URLEncoding.httpBody, headers: self.headers)
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

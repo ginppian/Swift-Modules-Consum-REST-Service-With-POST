@@ -102,7 +102,7 @@ algo así como que la forma de empaquetar los datos va a ser por duplas.
 * Procedemos a darle *SEND* o enviar, y se vería algo así:
 
 <p align="center">
-  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto2.png" width="981C" height="705" />
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto2.png" width="981" height="705" />
 </p>
 
 ### Paso 2
@@ -119,8 +119,15 @@ lo cual creará un archivo llamado *Podfile* lo abrimos
 * En su *GitHub* nos dice que en el archivo *Podfile* entre el nombre de nuestro proyecto y el *end* escribamos *pod 'Alamofire', '~> 4.4'* de esta manera:
 
 ```
-target '<Your Target Name>' do
-    pod 'Alamofire', '~> 4.4'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'REST' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for REST
+  pod 'Alamofire', '~> 4.4'
 end
 ```
 
@@ -131,5 +138,51 @@ guardamos y cerramos.
 pod install
 ```
 lo cual nos instalará el pod.
+
+### Paso 3
+
+Implementación.
+
+* Nos vamos a nuestro *ViewController* e importamos *Alamofire*
+
+```
+import Alamofire
+```
+
+puede que nos aparezca un circulo de ERROR pero es normal, necesitamos correr el proyecto si queremos que desaparezca.
+
+* Agregamos los *HEADERS*
+
+```
+    let headers: HTTPHeaders = [
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json",
+    ]
+```
+
+* Agregamos los *Parametros* o el *BODY*
+
+```
+    let params : Parameters = ["token": "c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5c7046e670d89365181d15d037262822231735da484398578"]
+```
+
+* Agregamos la *URL*:
+```
+    let url = "https://offercity.herokuapp.com/api/mostrarEstablecimiento"
+```
+* A continuación dentro de nuestro constructor o *ViewDidLoad* escribimos: *Alamofire.request* a continuación ponemos un punto, y veremos que Xcode nos auto acompleta las posibles opciones:
+
+<p align="center">
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto3.png" width="957" height="168" />
+</p>
+
+vemos que la opción que más se acopla a nuestras necesidades es la tercera.
+
+* A continuación llenamos los parámetros de esta manera:
+
+```
+Alamofire.request(self.url, method: .post, parameters: self.params, encoding: URLEncoding.httpBody, headers: self.headers)
+```
+
 
 
