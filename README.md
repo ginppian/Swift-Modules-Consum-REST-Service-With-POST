@@ -75,3 +75,15 @@ Para este caso usaré la siguiente:
 https://offercity.herokuapp.com/api/mostrarEstablecimiento
 ```
 
+Con el siguiente token:
+
+```
+c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5c7046e670d89365181d15d037262822231735da484398578
+```
+
+### Desarrollo
+
+Abrimos *POSTMAN* 
+<p align="center">
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto2.png" width="1962" height="1410" />
+</p>
