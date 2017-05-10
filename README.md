@@ -83,6 +83,8 @@ c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5
 
 ### Desarrollo
 
+## PASO 1
+
 * Abrimos *POSTMAN*
 * Pegamos la URL
 * En este caso como enviamos un *TOKEN* necesitamos hacerlo por el método *POST* pero puede ser *GET* o cualquier otro de los descritos anteriormente.
