@@ -89,11 +89,13 @@ c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5
 * Pegamos la URL
 * En este caso como enviamos un *TOKEN* necesitamos hacerlo por el método *POST* pero puede ser *GET* o cualquier otro de los descritos anteriormente.
 
-* Nos vamos a *Body* y seleccionamos *application/x-www-form-urlencoded* que es parte de nuestras **cabeceras HTTP** o **Headers**. La definición formal sobre este parámetro del reader nos dice que:
+* Nos vamos a *Body* y seleccionamos *application/x-www-form-urlencoded* que es parte de nuestras **cabeceras HTTP** o **Headers**. La definición formal sobre este parámetro del reader nos dice:
 
 ```
 "The values are encoded in key-value tuples separated by '&', with a '=' between the key and the value. Non-alphanumeric characters are percent encoded: this is the reason why this type is not suitable to use with binary data (use application/form-data instead)."
 ```
+
+algo así como que la forma de empaquetar los datos va a ser por duplas.
 
 * Más abajo donde dice *New key* escribimos *token* que es el parámetro que nos pide nuestra API para devolvernos información (esto ya no es parte de las *cabeceras HTTP* sino de nuestro **Body**) y a continuación copiamos todo el token que se encuentra más arriba y lo pegamos en *value*.
 
@@ -102,3 +104,32 @@ c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5
 <p align="center">
   <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto2.png" width="981C" height="705" />
 </p>
+
+### Paso 2
+
+A continuación instalaremos un *Pod* llamado [Alamofire](https://github.com/Alamofire/Alamofire) el cual nos permite descargar la información de manera eficiente sin mucho trabajo y de manera Asincrona.
+
+* Creamos un nuevo proyecto de Xcode
+* Abrimos una terminal y nos movemos a la carpeta donde se encuentra nuestro proyecto
+* Escribimos:
+```
+pod init
+```
+lo cual creará un archivo llamado *Podfile* lo abrimos
+* En su *GitHub* nos dice que en el archivo *Podfile* entre el nombre de nuestro proyecto y el *end* escribamos *pod 'Alamofire', '~> 4.4'* de esta manera:
+
+```
+target '<Your Target Name>' do
+    pod 'Alamofire', '~> 4.4'
+end
+```
+
+guardamos y cerramos.
+
+* A continuación escribimos:
+```
+pod install
+```
+lo cual nos instalará el pod.
+
+
