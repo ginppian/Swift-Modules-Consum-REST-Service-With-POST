@@ -320,7 +320,7 @@ class ViewController: UIViewController {
 Si construimos y corremos nuestro código, veremos que en la consola de Xcode se despliega algo como esto:
 
 <p align="center">
-  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto5.png" width="957" height="168" />
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto5.png" width="760" height="619" />
 </p>
 
 Se despliegan los mismo resultados que en *POSTMAN* con esto podemos empezar a trabajar con esa información. El siguiente paso será desplegarla en Tablas o algún otro tipo de interface.
