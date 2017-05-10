@@ -55,11 +55,23 @@ Es cualquier interfaz entre sistemas que use HTTP para obtener datos o generar o
 
 ### Herramientas
 
+<p align="justify">
 Antes de consumir los servicios nos gustaría probarlos para este fin, existen <i>clientes HTTP</i> que se instalan como <i>plugins</i> en nuestros Navegadores Web y que nos facilitan la tarea del consumo de servicios.
+<p>
 
 Para este ejemplo usaré <b>POSTMAN</b> pero existe otros como <i>Advanced REST client</i>:
 
 <p align="center">
   <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto1.png" width="568" height="320" />
 </p>
+
+<p align="justify">
+También necesitaremos una URL que contenga un Servicio y nos regrese un objeto JSON.
+</p>
+
+Para este caso usaré la siguiente: 
+
+```
+https://offercity.herokuapp.com/api/mostrarEstablecimiento
+```
 
