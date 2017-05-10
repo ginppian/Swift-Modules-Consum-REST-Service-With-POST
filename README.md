@@ -1,7 +1,7 @@
 Swift Module: Consumir Servicio POST de un API REST
 ===========
 
-### Descripción
+## Descripción
 
 <p align="justify">
 	Para el desarrollo de aplicaciones móviles es indispensable usar servicios. 
@@ -9,7 +9,7 @@ Swift Module: Consumir Servicio POST de un API REST
 	De aquí la necesidad de que tengamos un <b>Back-End</b> que se encargue de hacer las estas consultas y cálculos para entregarnos la información <b>digerida</b>, y así entregarle una respuesta rápida y eficaz al usuario.
 </p>
 
-### Framework vs API
+## Framework vs API
 <p align="justify">
 Imagina que vives en 1970 y estás decidido a reutilizar tu código entonces crear la función seno(), coseno(), tangente(), le agregas Float obtenerRadio(diámetro: Float). Y así todas estas funciones las unes y crearas una <b>librería</b> posteriormente una empresa se interesa en el trabajo y contrata a más programadores los cuales hacen librerías para: manejo de imágenes, conexión a internet, sockets, etc. Pues el conjunto de todas estas librerías se conoce como <b>Framework</b>.
 Ahora ya tienes tu framework y es más fácil para ti programar, pero te das cuenta que todavía así puedes ahorras más tiempo pues existen pasos repetitivos que te gustaría sólo <i>implementar</i>.
@@ -23,7 +23,7 @@ Las APIs se valen de estas funciones que vienen en los Frameworks y construyen u
 Básicamente un API es algo pre-programado que nos otros sólo llegamos e implementamos.
 </p>
 
-### ¿Qué es un API REST?
+## ¿Qué es un API REST?
 
 <p align="justify">
 Es cualquier interfaz entre sistemas que use HTTP para obtener datos o generar operaciones sobre esos datos en todos los formatos posibles, como XML y JSON.
@@ -53,7 +53,7 @@ Es cualquier interfaz entre sistemas que use HTTP para obtener datos o generar o
 &#9642; Uso de hipermedios: hipermedia es un término acuñado por Ted Nelson en 1965 y que es una extensión del concepto de hipertexto. Ese concepto llevado al desarrollo de páginas web es lo que permite que el usuario puede navegar por el conjunto de objetos a través de enlaces HTML. En el caso de una API REST, el concepto de hipermedia explica la capacidad de una interfaz de desarrollo de aplicaciones de proporcionar al cliente y al usuario los enlaces adecuados para ejecutar acciones concretas sobre los datos.
 </p>
 
-### Herramientas
+## Herramientas
 
 <p align="justify">
 Antes de consumir los servicios nos gustaría probarlos para este fin, existen <i>clientes HTTP</i> que se instalan como <i>plugins</i> en nuestros Navegadores Web y que nos facilitan la tarea del consumo de servicios.
@@ -81,9 +81,9 @@ Con el siguiente token:
 c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5c7046e670d89365181d15d037262822231735da484398578
 ```
 
-### Desarrollo
+## Desarrollo
 
-## PASO 1
+### PASO 1
 
 * Abrimos *POSTMAN*
 * Pegamos la URL
