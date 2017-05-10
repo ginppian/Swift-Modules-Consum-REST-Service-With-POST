@@ -53,3 +53,13 @@ Es cualquier interfaz entre sistemas que use HTTP para obtener datos o generar o
 &#9642; Uso de hipermedios: hipermedia es un término acuñado por Ted Nelson en 1965 y que es una extensión del concepto de hipertexto. Ese concepto llevado al desarrollo de páginas web es lo que permite que el usuario puede navegar por el conjunto de objetos a través de enlaces HTML. En el caso de una API REST, el concepto de hipermedia explica la capacidad de una interfaz de desarrollo de aplicaciones de proporcionar al cliente y al usuario los enlaces adecuados para ejecutar acciones concretas sobre los datos.
 </p>
 
+### Herramientas
+
+Antes de consumir los servicios nos gustaría probarlos para este fin, existen <i>clientes HTTP</i> que se instalan como <i>plugins</i> en nuestros Navegadores Web y que nos facilitan la tarea del consumo de servicios.
+
+Para este ejemplo usaré <b>POSTMAN</b> pero existe otros como <i>Advanced REST client</i>:
+
+<p align="center">
+  <img src="https://github.com/ginppian/Swift-Modules-Nice-CollectionView/blob/master/video.gif" width="320" height="568" />
+</p>
+
