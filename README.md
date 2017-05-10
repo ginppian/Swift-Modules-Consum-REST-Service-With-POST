@@ -184,5 +184,135 @@ vemos que la opción que más se acopla a nuestras necesidades es la tercera.
 Alamofire.request(self.url, method: .post, parameters: self.params, encoding: URLEncoding.httpBody, headers: self.headers)
 ```
 
+* Una vez terminada la sentencia escribimos *.response* y veremos que nos aparecen estas opciones:
+
+<p align="center">
+  <img src="https://github.com/ginppian/Swift-Modules-Consum-REST-Service-With-POST/blob/master/tuto4.png" width="957" height="168" />
+</p>
+
+Alamofire nos lo describe de la siguiente manera:
+
+```
+// Response Handler - Unserialized Response
+func response(
+    queue: DispatchQueue?,
+    completionHandler: @escaping (DefaultDataResponse) -> Void)
+    -> Self
+
+// Response Data Handler - Serialized into Data
+func responseData(
+    queue: DispatchQueue?,
+    completionHandler: @escaping (DataResponse<Data>) -> Void)
+    -> Self
+
+// Response String Handler - Serialized into String
+func responseString(
+    queue: DispatchQueue?,
+    encoding: String.Encoding?,
+    completionHandler: @escaping (DataResponse<String>) -> Void)
+    -> Self
+
+// Response JSON Handler - Serialized into Any
+func responseJSON(
+    queue: DispatchQueue?,
+    completionHandler: @escaping (DataResponse<Any>) -> Void)
+    -> Self
+
+// Response PropertyList (plist) Handler - Serialized into Any
+func responsePropertyList(
+    queue: DispatchQueue?,
+    completionHandler: @escaping (DataResponse<Any>) -> Void))
+    -> Self
+```
+
+para nuestro proposito usaremos *.responseJSON*
+
+* En el *Complation Handler* escribiremos *{response in}*
+de tal manera que nuestro código se vea así:
+
+```
+import UIKit
+import Alamofire
+
+class ViewController: UIViewController {
+    
+    let headers: HTTPHeaders = [
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json",
+        ]
+    
+    let params : Parameters = ["token": "c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5c7046e670d89365181d15d037262822231735da484398578"]
+    
+    let url = "https://offercity.herokuapp.com/api/mostrarEstablecimiento"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Alamofire.request(self.url, method: .post, parameters: self.params, encoding: URLEncoding.httpBody, headers: self.headers)
+            
+            .responseJSON(completionHandler: { response in
+            
+            })
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
+```
+
+* Pues al parecer tenemos todo listo. 
+Por último para desplegar algunos resultado escribimos este código dentro del *Complation Handler*:
+
+```
+                print("resquest: \(response.request)")  // original URL request
+                print("response: \(response.response)") // URL response
+                print("data: \(response.data)")     // server data
+                print("result: \(response.result)")   // result of response serialization
+                print("result.value: \(response.result.value)")
+```
+
+de tal manera el código de nuestro *ViewController* se vería algo así:
+
+```
+import UIKit
+import Alamofire
+
+class ViewController: UIViewController {
+    
+    let headers: HTTPHeaders = [
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json",
+        ]
+    
+    let params : Parameters = ["token": "c31e7cc5503e222a6d2ab594c845730272273a5bdcdbd1b97e29df7e19b3ecdadf021fe6a05a0da5c7046e670d89365181d15d037262822231735da484398578"]
+    
+    let url = "https://offercity.herokuapp.com/api/mostrarEstablecimiento"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Alamofire.request(self.url, method: .post, parameters: self.params, encoding: URLEncoding.httpBody, headers: self.headers)
+            
+            .responseJSON(completionHandler: { response in
+                print("resquest: \(response.request)")  // original URL request
+                print("response: \(response.response)") // URL response
+                print("data: \(response.data)")     // server data
+                print("result: \(response.result)")   // result of response serialization
+                print("result.value: \(response.result.value)")
+            })
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
+```
 
 

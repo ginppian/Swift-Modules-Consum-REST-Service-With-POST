@@ -24,16 +24,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         Alamofire.request(self.url, method: .post, parameters: self.params, encoding: URLEncoding.httpBody, headers: self.headers)
-        
-        
-        
+            
+            .responseJSON(completionHandler: { response in
+                print("resquest: \(response.request)")  // original URL request
+                print("response: \(response.response)") // URL response
+                print("data: \(response.data)")     // server data
+                print("result: \(response.result)")   // result of response serialization
+                print("result.value: \(response.result.value)")
+            })
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
